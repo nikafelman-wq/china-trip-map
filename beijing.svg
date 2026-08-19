@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Beijing architecture">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#b9d7d4"/>
+      <stop offset="0.58" stop-color="#f3d6a7"/>
+      <stop offset="1" stop-color="#9e4d38"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" x2="1">
+      <stop offset="0" stop-color="#8d281f"/>
+      <stop offset="1" stop-color="#d45735"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="930" cy="145" r="72" fill="#f4c56d" opacity=".9"/>
+  <path d="M0 610c160-52 283-45 420-5 127 37 271 54 430 4 143-45 244-43 350 1v190H0z" fill="#243b31" opacity=".35"/>
+  <path d="M150 468h900l-56 72H206z" fill="url(#roof)"/>
+  <path d="M85 530c96 20 226-2 312-78 62 44 138 68 228 68s166-24 228-68c85 76 215 98 312 78-49 57-157 86-270 57-80 39-180 54-270 54s-190-15-270-54c-113 29-221 0-270-57z" fill="#af3928"/>
+  <rect x="240" y="540" width="720" height="150" fill="#633021"/>
+  <rect x="305" y="572" width="92" height="118" fill="#d6a65c"/>
+  <rect x="458" y="572" width="92" height="118" fill="#d6a65c"/>
+  <rect x="611" y="572" width="92" height="118" fill="#d6a65c"/>
+  <rect x="764" y="572" width="92" height="118" fill="#d6a65c"/>
+  <path d="M172 690h856v58H172z" fill="#2a2d24"/>
+  <path d="M0 748h1200v52H0z" fill="#18231e"/>
+</svg>

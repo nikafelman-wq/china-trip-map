@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Zhangjiajie mountains">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#b8d8d1"/>
+      <stop offset="0.62" stop-color="#dbe8d8"/>
+      <stop offset="1" stop-color="#7b9b79"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#6d6756"/>
+      <stop offset="1" stop-color="#2f4035"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <path d="M0 525c170-105 315-124 435-58 137 75 244 75 385 1 119-62 245-55 380 21v311H0z" fill="#5d7c60" opacity=".55"/>
+  <path d="M175 720 246 194l84 526zM390 734l82-610 98 610zM642 730l95-530 74 530zM878 724l72-410 76 410z" fill="url(#rock)"/>
+  <path d="M218 202c34-31 69-31 105 0-34 20-69 21-105 0zM435 130c46-42 93-43 141 0-46 26-93 27-141 0zM704 205c37-34 75-35 113 0-36 22-74 22-113 0zM920 318c30-25 60-26 90 0-28 17-58 17-90 0z" fill="#2f6d4b"/>
+  <path d="M0 680c256-70 496-70 720 0s384 70 480 10v110H0z" fill="#1f352d"/>
+  <path d="M72 312c109-32 218-31 327 3M678 286c124-39 249-37 376 5M466 390c86-27 171-27 256 0" fill="none" stroke="#f5f2de" stroke-width="24" stroke-linecap="round" opacity=".45"/>
+</svg>

@@ -1,0 +1,1031 @@
+:root {
+  --ink: #1e2720;
+  --muted: #637064;
+  --paper: #f6f1e7;
+  --mist: #dce7df;
+  --jade: #1d6b57;
+  --leaf: #8ea35b;
+  --clay: #b85d3c;
+  --night: #14211d;
+  --white: #fffaf1;
+  --line: rgba(30, 39, 32, 0.14);
+  --shadow: 0 22px 60px rgba(26, 41, 34, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 14% 7%, rgba(184, 93, 60, 0.14), transparent 26%),
+    radial-gradient(circle at 86% 20%, rgba(29, 107, 87, 0.12), transparent 30%),
+    linear-gradient(90deg, rgba(20, 33, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(20, 33, 29, 0.03) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, auto, 34px 34px, 34px 34px, auto;
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  padding: 24px clamp(18px, 4vw, 56px) 42px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(10, 20, 17, 0.86), rgba(10, 20, 17, 0.38) 56%, rgba(10, 20, 17, 0.62)),
+    url("assets/photos/great-wall.png") center/cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 250, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 250, 241, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mix-blend-mode: overlay;
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0;
+  font-size: 18px;
+}
+
+.navlinks {
+  display: flex;
+  gap: clamp(10px, 2vw, 24px);
+  font-size: 14px;
+  color: rgba(255, 250, 241, 0.82);
+}
+
+.navlinks a:hover {
+  color: var(--white);
+}
+
+.hero-art {
+  position: absolute;
+  z-index: 1;
+  right: clamp(12px, 5vw, 72px);
+  bottom: clamp(86px, 9vw, 132px);
+  width: min(37vw, 430px);
+  min-width: 260px;
+  opacity: 0.9;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.25));
+}
+
+.pagoda-art {
+  width: 100%;
+  height: auto;
+}
+
+.pagoda-art path {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pagoda-art .roof,
+.pagoda-art .sun {
+  fill: #d83225;
+  stroke: #1b1b18;
+  stroke-width: 5;
+}
+
+.pagoda-art .ink {
+  stroke: #1b1b18;
+}
+
+.pagoda-art .cloud {
+  stroke: rgba(255, 250, 241, 0.86);
+  stroke-width: 5;
+}
+
+.pagoda-art .bird {
+  stroke: #1b1b18;
+  stroke-width: 7;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  max-width: 760px;
+  padding: 80px 0 70px;
+}
+
+.paper-branch {
+  width: min(900px, calc(100% - 36px));
+  margin: 54px auto -40px;
+  color: rgba(29, 107, 87, 0.42);
+  pointer-events: none;
+}
+
+.paper-branch svg {
+  width: 100%;
+  height: auto;
+}
+
+.paper-branch path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.paper-branch path:not(:first-child) {
+  fill: rgba(184, 93, 60, 0.18);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 14px;
+  color: var(--clay);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #f1b584;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 18px;
+  max-width: 780px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 10vw, 128px);
+  line-height: 0.92;
+  font-weight: 500;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.lead {
+  max-width: 620px;
+  color: rgba(255, 250, 241, 0.86);
+  font-size: clamp(18px, 2.1vw, 24px);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-weight: 800;
+  line-height: 1.15;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: var(--white);
+  color: var(--night);
+  border-color: var(--white);
+}
+
+.button--ghost {
+  color: var(--white);
+  border-color: rgba(255, 250, 241, 0.72);
+}
+
+.button--dark {
+  width: 100%;
+  background: var(--night);
+  color: var(--white);
+  border-color: var(--night);
+}
+
+.trip-card {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 520px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(255, 250, 241, 0.42);
+  color: rgba(255, 250, 241, 0.78);
+}
+
+.trip-card strong {
+  color: var(--white);
+  font-size: 22px;
+}
+
+.section {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 86px 0;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 34px;
+  align-items: end;
+}
+
+.intro p:not(.section-label),
+.section-heading p:not(.section-label) {
+  max-width: 680px;
+  color: var(--muted);
+}
+
+.date-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 241, 0.72);
+}
+
+.date-tab {
+  min-height: 46px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.date-tab.active {
+  background: var(--jade);
+  color: var(--white);
+  box-shadow: 0 12px 28px rgba(29, 107, 87, 0.26);
+}
+
+.date-note {
+  display: grid;
+  gap: 8px;
+  min-width: 280px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--white);
+  box-shadow: 0 14px 40px rgba(26, 41, 34, 0.1);
+}
+
+.date-note strong {
+  color: var(--jade);
+  font-size: 20px;
+}
+
+.date-note span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.map-section {
+  padding-top: 30px;
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.china-map {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid rgba(29, 107, 87, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 241, 0.88), rgba(220, 231, 223, 0.78)),
+    radial-gradient(circle at 70% 20%, rgba(184, 93, 60, 0.16), transparent 24%);
+  box-shadow: var(--shadow);
+}
+
+.china-map::before {
+  content: "路线";
+  position: absolute;
+  right: 26px;
+  top: 18px;
+  color: rgba(184, 93, 60, 0.18);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 76px;
+  line-height: 1;
+}
+
+.real-china-map {
+  position: absolute;
+  inset: 28px;
+  width: calc(100% - 56px);
+  height: calc(100% - 56px);
+  object-fit: contain;
+  opacity: 0.78;
+  filter: sepia(0.12) saturate(0.86) contrast(0.96);
+}
+
+.map-drawing {
+  position: absolute;
+  inset: 28px;
+  width: calc(100% - 56px);
+  height: calc(100% - 56px);
+  pointer-events: none;
+}
+
+.route-line {
+  fill: none;
+  stroke: rgba(184, 93, 60, 0.74);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-dasharray: 10 12;
+  vector-effect: non-scaling-stroke;
+}
+
+.route-line--soft {
+  stroke: rgba(29, 107, 87, 0.45);
+  stroke-width: 0.85;
+  stroke-dasharray: 5 10;
+}
+
+.map-points {
+  position: absolute;
+  inset: 28px;
+}
+
+.map-point {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--clay);
+  color: var(--white);
+  box-shadow: 0 12px 22px rgba(26, 41, 34, 0.24);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.map-point span {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 900;
+}
+
+.map-point:hover,
+.map-point.active {
+  background: var(--jade);
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.map-card {
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.map-card__image {
+  height: 260px;
+}
+
+.map-card__body {
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.map-card p {
+  color: var(--muted);
+}
+
+.map-move {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 18px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.route {
+  padding-top: 30px;
+}
+
+.section-heading {
+  margin-bottom: 34px;
+}
+
+.route-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.timeline {
+  display: grid;
+  gap: 8px;
+}
+
+.day-button {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  min-height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(255, 250, 241, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.day-button strong {
+  display: block;
+  color: var(--jade);
+  font-size: 14px;
+}
+
+.day-button span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.day-button.active {
+  border-color: rgba(29, 107, 87, 0.5);
+  background: var(--white);
+  box-shadow: 0 14px 38px rgba(26, 41, 34, 0.12);
+}
+
+.day-detail {
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 18px;
+}
+
+.day-detail__image {
+  height: 330px;
+}
+
+.day-detail__body {
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.day-kicker {
+  color: var(--clay);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.day-detail ul {
+  margin: 22px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: min(1280px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.photo-grid figure {
+  position: relative;
+  min-height: 300px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--mist);
+}
+
+.photo-grid figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  border-radius: 5px;
+  padding: 7px 10px;
+  background: rgba(20, 33, 29, 0.78);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.flights,
+.hotels,
+.budget {
+  padding-bottom: 50px;
+}
+
+.flight-panel,
+.include-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hotel-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.hotel-visual {
+  display: grid;
+  gap: 14px;
+}
+
+.hotel-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 0.58fr);
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--white);
+  box-shadow: 0 14px 40px rgba(26, 41, 34, 0.1);
+}
+
+.hotel-card__image {
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--mist);
+}
+
+.hotel-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+}
+
+.hotel-card__head span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--clay);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hotel-card__head,
+.hotel-card .hotel-bar,
+.hotel-card dl,
+.hotel-card p {
+  grid-column: 2;
+}
+
+.hotel-card__head strong {
+  flex: 0 0 auto;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: var(--mist);
+  color: var(--jade);
+  font-size: 14px;
+}
+
+.hotel-bar {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(29, 107, 87, 0.12);
+}
+
+.hotel-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--jade), var(--leaf));
+}
+
+.hotel-card dl {
+  display: grid;
+  grid-template-columns: 1.2fr 0.75fr 0.75fr;
+  gap: 10px;
+  margin: 18px 0 14px;
+}
+
+.hotel-card dl div {
+  display: grid;
+  gap: 4px;
+}
+
+.hotel-card dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hotel-card dd {
+  margin: 0;
+  font-weight: 800;
+}
+
+.hotel-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.hotel-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding: clamp(24px, 4vw, 34px);
+  background:
+    linear-gradient(135deg, rgba(184, 93, 60, 0.16), transparent 38%),
+    var(--white);
+  box-shadow: var(--shadow);
+}
+
+.hotel-note span {
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hotel-note strong {
+  margin: 10px 0 16px;
+  color: var(--jade);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.hotel-note p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.flight-card,
+.include-grid article,
+.ticket-details article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 34px);
+  background: var(--white);
+  background-image:
+    linear-gradient(135deg, rgba(184, 93, 60, 0.08), transparent 34%),
+    linear-gradient(rgba(30, 39, 32, 0.035) 1px, transparent 1px);
+  background-size: auto, 22px 22px;
+}
+
+.pill {
+  display: inline-flex;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: var(--mist);
+  color: var(--jade);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.flight-card p {
+  color: var(--muted);
+  min-height: 50px;
+}
+
+.ticket-status {
+  display: inline-flex;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  background: rgba(184, 93, 60, 0.12);
+  color: var(--clay);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ticket-details dl {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.ticket-details dl div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.ticket-details dt {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ticket-details dd {
+  margin: 0;
+  font-weight: 800;
+}
+
+.include-grid ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.include-grid li + li {
+  margin-top: 8px;
+}
+
+.budget-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.calculator {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 34px);
+  background: var(--white);
+}
+
+.calculator label {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(160px, 2fr) 96px;
+  gap: 16px;
+  align-items: center;
+  font-weight: 800;
+}
+
+.calculator span {
+  text-align: right;
+  color: var(--jade);
+}
+
+input[type="range"] {
+  accent-color: var(--jade);
+}
+
+.budget-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding: clamp(28px, 4vw, 42px);
+  background: var(--night);
+  color: var(--white);
+}
+
+.budget-total span {
+  color: rgba(255, 250, 241, 0.72);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.budget-total strong {
+  margin: 12px 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.budget-total p {
+  color: rgba(255, 250, 241, 0.75);
+}
+
+footer {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--jade);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .intro,
+  .map-layout,
+  .route-layout,
+  .flight-panel,
+  .hotel-layout,
+  .ticket-details,
+  .include-grid,
+  .budget-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .date-switch {
+    width: 100%;
+  }
+
+  .date-note {
+    min-width: 0;
+  }
+
+  .china-map {
+    min-height: 470px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .day-detail {
+    min-height: 0;
+    position: static;
+  }
+
+  .hero-art {
+    right: 18px;
+    bottom: 96px;
+    width: 310px;
+    opacity: 0.54;
+  }
+
+  .hotel-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-card__head,
+  .hotel-card .hotel-bar,
+  .hotel-card dl,
+  .hotel-card p {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 860px;
+    padding-inline: 18px;
+  }
+
+  .hero__content {
+    padding-top: 54px;
+  }
+
+  .hero-art {
+    width: 270px;
+    min-width: 0;
+    right: -18px;
+    bottom: 122px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navlinks {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .trip-card,
+  .date-switch,
+  .hotel-card dl,
+  .calculator label {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-card__head {
+    flex-direction: column;
+  }
+
+  .trip-card {
+    gap: 4px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid figure {
+    min-height: 260px;
+  }
+
+  .day-detail__image {
+    height: 240px;
+  }
+
+  .calculator span {
+    text-align: left;
+  }
+
+  .ticket-details dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .china-map {
+    min-height: 420px;
+  }
+
+  .map-point {
+    width: 36px;
+    height: 36px;
+  }
+}

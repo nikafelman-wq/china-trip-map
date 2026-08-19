@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Great Wall">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#9ec6cc"/>
+      <stop offset="1" stop-color="#f1d7a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="210" cy="150" r="72" fill="#f3bd66"/>
+  <path d="M0 542c143-140 275-200 390-178 120 23 202 135 326 142 153 9 253-128 484-78v372H0z" fill="#55705b"/>
+  <path d="M0 625c170-96 327-119 470-69 135 47 262 35 378-34 110-66 227-72 352-18v296H0z" fill="#263c31"/>
+  <path d="M72 592c168-93 294-111 379-54 88 59 184 74 288 46 107-29 235-24 385 16l-20 55c-145-43-264-47-357-13-129 47-248 27-359-58-62-47-166-25-312 64z" fill="#c9ad77"/>
+  <path d="M144 564h92v84h-92zM438 520h104v88H438zM806 548h110v96H806z" fill="#8b734c"/>
+  <path d="M144 552h92v20h-92zM438 508h104v22H438zM806 536h110v22H806z" fill="#d2bd8a"/>
+</svg>
