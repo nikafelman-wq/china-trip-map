@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-label="China route map">
+  <rect width="1000" height="720" fill="#eef1e6"/>
+  <path d="M612 110c74 8 127 42 168 94 52 65 115 68 142 142 22 60-12 124-72 153-65 31-94 81-134 123-43 44-119 27-156-15-49-56-86-19-151-41-60-20-64-80-105-117-50-45-135-33-168-103-28-59 36-106 88-133 56-29 55-83 111-112 68-36 150 1 277 9z" fill="#d8e4d7" stroke="#729176" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M642 172c70 44 122 98 157 161M368 250c-58 50-84 111-78 183M514 544c67 19 128 16 183-10" fill="none" stroke="#b9c8b4" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="696" cy="278" r="18" fill="#b85d3c"/>
+  <circle cx="605" cy="496" r="18" fill="#b85d3c"/>
+  <circle cx="778" cy="454" r="18" fill="#b85d3c"/>
+</svg>
